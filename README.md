@@ -40,6 +40,7 @@ To enable [Disqus](https://disqus.com/) comments go to your blogs code injection
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
 var gitalkConf = {
@@ -48,6 +49,7 @@ var gitalkConf = {
   repo: 'YOUR_GITHUB_REPO',
   owner: 'YOUR_GITHUB_ACCOUNT',
   admin: ['YOUR_GITHUB_ACCOUNT'],
+  id: md5(location.pathname),
   // facebook-like distraction free mode
   distractionFreeMode: false
 };
